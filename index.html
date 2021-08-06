@@ -17,14 +17,14 @@
             <h2>Amount Calculator</h2>
             <!--Inputs here-->
             <div id="inputs" >
-                <input id="price" placeholder="Price" type="number"><br>
-                <input id="quantity" placeholder="Quantity" type="number">
+                <input id="price" placeholder="Price" type="number" v-model="price" v-on:change="change" v-on:keyup="change"><br>
+                <input id="quantity" placeholder="Quantity" type="number" v-model="quantity" v-on:change="change" v-on:keyup="change">
                 <p>Discount</p>
-                <input type="range">
+                <input type="range" min=0 max=100 value=0 v-model="discount" v-on:change="change">
                 <p>{{ discount }}</p>
-                <input type="radio" name="cess" value="b2b" id="b2b">
+                <input type="radio" name="cess" value=0 id="b2b" checked="checked" v-model="cess" v-on:change="change">
                 <label for="b2b">B2B</label>
-                <input type="radio" name="cess" value="b2c" id="b2c">
+                <input type="radio" name="cess" value=0.01 id="b2c" v-model="cess" v-on:change="change">
                 <label for="b2b">B2C</label>
 
             </div>
@@ -33,19 +33,19 @@
             <div id="outputs" class="btn-group">
                 
                     <div>Gross Amount</div>
-                    <div>Sample</div>
+                    <div>{{ gross_amount }}</div>
                 
                 
                     <div>Discount Amount</div>
-                    <div>Sample</div>
+                    <div>{{ discount_amount }}</div>
                 
                 
                     <div>Cess Amount</div>
-                    <div>Sample</div>
+                    <div>{{ cess_amount }}</div>
                 
                 
                     <div>Total Bill with Discount</div>
-                    <div>Sample</div>
+                    <div>{{ total_bill_with_discount }}</div>
                
             </div>
         </div>
