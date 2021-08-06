@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapidor Claculator</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div id="vueapp">
+        <div class="container" id="canvas">
+            <h2>Amount Calculator</h2>
+            <!--Inputs here-->
+            <div id="inputs" >
+                <input id="price" placeholder="Price" type="number"><br>
+                <input id="quantity" placeholder="Quantity" type="number">
+                <p>Discount</p>
+                <input type="range">
+                <p>{{ discount }}</p>
+                <input type="radio" name="cess" value="b2b" id="b2b">
+                <label for="b2b">B2B</label>
+                <input type="radio" name="cess" value="b2c" id="b2c">
+                <label for="b2b">B2C</label>
+
+            </div>
+
+            <!--Outputs here-->
+            <div id="outputs" class="btn-group">
+                
+                    <div>Gross Amount</div>
+                    <div>Sample</div>
+                
+                
+                    <div>Discount Amount</div>
+                    <div>Sample</div>
+                
+                
+                    <div>Cess Amount</div>
+                    <div>Sample</div>
+                
+                
+                    <div>Total Bill with Discount</div>
+                    <div>Sample</div>
+               
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
